@@ -1,11 +1,16 @@
-<!-- Part B: Main screen strings -->
-<!-- Part C: Update application name shown under the launcher icon. -->
-<string name="app_name">CampusLife</string><!-- Part C: Update application name to CampusLife. -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 
-<string name="banner_title">CampusLife</string>
-<string name="banner_cd">Main banner image</string>
+    <!-- Part B: Main screen strings -->
+    <string name="banner_title">CampusLife</string>
+    <string name="banner_cd">Main banner image</string>
 
-<string name="facilities">Facilities</string>
-<string name="events">Events</string>
-<string name="clubs">Clubs</string>
-<string name="support">Support</string>
+    <string name="facilities">Facilities</string>
+    <string name="events">Events</string>
+    <string name="clubs">Clubs</string>
+    <string name="support">Support</string>
+
+    <!-- Part C: Update application name shown under the launcher icon -->
+    <string name="app_name">CampusLife</string>
+
+</resources>
