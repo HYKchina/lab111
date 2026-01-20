@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
@@ -21,4 +24,21 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+    // Part E: Click handlers for the four feature buttons (Toast verification).
+    public void onFacilitiesClicked(View view) {
+        Toast.makeText(this, "Facilities clicked", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onEventsClicked(View view) {
+        Toast.makeText(this, "Events clicked", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClubsClicked(View view) {
+        Toast.makeText(this, "Clubs clicked", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onSupportClicked(View view) {
+        Toast.makeText(this, "Support clicked", Toast.LENGTH_SHORT).show();
+    }
+
 }
