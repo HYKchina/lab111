@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Part D: Landscape layout - show four feature buttons in a single horizontal row. -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Split screen into banner(top) and button row(bottom) -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineSplit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <!-- ===== Top banner ===== -->
+    <FrameLayout
+        android:id="@+id/bannerContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guidelineSplit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/bannerImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/banner_cd"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_main_banner" />
+
+        <!-- Banner title: the only allowed hard-coded size is 40sp -->
+        <TextView
+            android:id="@+id/bannerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/banner_title"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="40sp" />
+    </FrameLayout>
+
+    <!-- ===== Bottom single row ===== -->
+    <LinearLayout
+        android:id="@+id/rowContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_l"
+        app:layout_constraintTop_toBottomOf="@id/guidelineSplit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Each cell uses ConstraintLayout to keep the button square without fixed sizes -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/space_m">
+
+            <ImageButton
+                android:id="@+id/btnFacilities"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_selector"
+                android:contentDescription="@string/facilities"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_btn_facilities"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tvFacilities"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="1:1" />
+
+            <TextView
+                android:id="@+id/tvFacilities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/facilities"
+                app:layout_constraintTop_toBottomOf="@id/btnFacilities"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="12dp">
+
+            <ImageButton
+                android:id="@+id/btnEvents"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_selector"
+                android:contentDescription="@string/events"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_btn_events"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tvEvents"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="1:1" />
+
+            <TextView
+                android:id="@+id/tvEvents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/events"
+                app:layout_constraintTop_toBottomOf="@id/btnEvents"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="12dp">
+
+            <ImageButton
+                android:id="@+id/btnClubs"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_selector"
+                android:contentDescription="@string/clubs"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_btn_clubs"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tvClubs"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="1:1" />
+
+            <TextView
+                android:id="@+id/tvClubs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clubs"
+                app:layout_constraintTop_toBottomOf="@id/btnClubs"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/btnSupport"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_selector"
+                android:contentDescription="@string/support"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_btn_support"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tvSupport"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintDimensionRatio="1:1" />
+
+            <TextView
+                android:id="@+id/tvSupport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/support"
+                app:layout_constraintTop_toBottomOf="@id/btnSupport"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
