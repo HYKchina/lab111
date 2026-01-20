@@ -83,6 +83,8 @@
                     app:layout_constraintBottom_toTopOf="@id/tvFacilities"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    android:onClick="onFacilitiesClicked"
+
                     app:layout_constraintDimensionRatio="1:1" />
 
                 <TextView
@@ -115,6 +117,8 @@
                     app:layout_constraintBottom_toTopOf="@id/tvEvents"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    android:onClick="onEventsClicked"
+
                     app:layout_constraintDimensionRatio="1:1" />
 
                 <TextView
@@ -155,6 +159,8 @@
                     app:layout_constraintBottom_toTopOf="@id/tvClubs"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    android:onClick="onClubsClicked"
+
                     app:layout_constraintDimensionRatio="1:1" />
 
                 <TextView
@@ -187,6 +193,9 @@
                     app:layout_constraintBottom_toTopOf="@id/tvSupport"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    android:onClick="onSupportClicked"
+
+
                     app:layout_constraintDimensionRatio="1:1" />
 
                 <TextView
