@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General spacing -->
+    <dimen name="space_s">8dp</dimen>
+    <dimen name="space_m">12dp</dimen>
+    <dimen name="space_l">16dp</dimen>
+
+    <!-- Text sizes (except banner title which must be 40sp) -->
+    <dimen name="label_text_size">14sp</dimen>
+</resources>
