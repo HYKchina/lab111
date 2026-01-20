@@ -1,4 +1,7 @@
 <!-- Part B: Main screen strings -->
+<!-- Part C: Update application name shown under the launcher icon. -->
+<string name="app_name">CampusLife</string><!-- Part C: Update application name to CampusLife. -->
+
 <string name="banner_title">CampusLife</string>
 <string name="banner_cd">Main banner image</string>
 
