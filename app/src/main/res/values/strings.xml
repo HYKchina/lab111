@@ -1,3 +1,8 @@
-<resources>
-    <string name="app_name">My Application</string>
-</resources>
+<!-- Part B: Main screen strings -->
+<string name="banner_title">CampusLife</string>
+<string name="banner_cd">Main banner image</string>
+
+<string name="facilities">Facilities</string>
+<string name="events">Events</string>
+<string name="clubs">Clubs</string>
+<string name="support">Support</string>
